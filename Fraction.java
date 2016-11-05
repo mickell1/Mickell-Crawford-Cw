@@ -80,7 +80,7 @@ public class Fraction
     public Fraction add(Fraction val) 
     {
         /*The code below does the above calculation a/b + c/d = (a*d + b*c)/(b*d)*/
-        return null;
+        return new Fraction(numerator.multiply(val.denominator).add(denominator.multiply(val.numerator)), denominator.multiply(val.denominator));
     }
 
     /**
@@ -104,7 +104,7 @@ public class Fraction
     public Fraction subtract(Fraction val) 
     {
         /*This will subtract two fractions*/
-        return null;
+         return new Fraction((numerator).multiply(val.denominator).subtract(denominator.multiply(val.numerator)), denominator.multiply(val.denominator));
     }
 
     /**
@@ -117,7 +117,7 @@ public class Fraction
     public Fraction multiply(Fraction val) 
     {
         /*This will multiply two fractions*/
-        return null;
+        return new Fraction(numerator.multiply(val.numerator), denominator.multiply(val.denominator));
     }
 
     /**
@@ -129,7 +129,7 @@ public class Fraction
     public Fraction divide(Fraction val) 
     {
         /*This will divide two fractions*/
-        return null;
+        return new Fraction(numerator.multiply(val.denominator), denominator.multiply(val.numerator));
     }
 
     /**
