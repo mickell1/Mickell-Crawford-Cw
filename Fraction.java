@@ -140,7 +140,7 @@ public class Fraction
     public Fraction negate() 
     {
         /*This will subtract from numerator & denominator*/
-        return null;
+        return new Fraction(numerator.negate(), denominator);
     }
 
     /**
@@ -150,7 +150,7 @@ public class Fraction
      */
     public Fraction invert() 
     {
-        return null;
+        return new Fraction(denominator, numerator);
     }
 
     /**
