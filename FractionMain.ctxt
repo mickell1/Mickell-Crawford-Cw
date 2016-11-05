@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=allFractions
+comment0.target=fractions.Fraction[]\ getallFractions(fractions.Fraction[])
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ @param\ args\ Ignored.\n
+numComments=2
