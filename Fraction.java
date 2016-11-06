@@ -92,7 +92,17 @@ public class Fraction
      */
     public static Fraction sumAll(Fraction[] fractions) 
     {
-        return null;
+        Fraction sum = new Fraction(BigInteger.ZERO);
+        for(int i = 0; i < fractions.length; i++)
+        {
+            if(fractions[i] == null)
+            {
+                return null;
+            }
+            sum = sum.add(fractions[i]);
+            //return sum;
+        }
+        return sum;
     }
 
     /**
