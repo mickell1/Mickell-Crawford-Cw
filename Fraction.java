@@ -205,11 +205,11 @@ public class Fraction
     {
         if(this.compareTo(val) >= 0)
         {
-            return this;
+            return val;
         }
         else
         {
-            return val;
+            return this;
         }
     }
 
@@ -221,13 +221,13 @@ public class Fraction
      */
     public Fraction min(Fraction val) 
     {
-        if(this.compareTo(val) <= 0)
+         if(this.compareTo(val) <= 0)
         {
-            return this;
+            return val;
         }
         else
         {
-            return val;
+            return this;
         }
     }
 
@@ -269,7 +269,7 @@ public class Fraction
      */
     public int compareTo(Fraction val) 
     {
-         if(signum() != val.signum())
+        if(signum() != val.signum())
         {
             return denominator.compareTo(val.denominator);
         }
@@ -293,12 +293,11 @@ public class Fraction
      */
     public boolean isEqualTo(Fraction val) 
     {
-        if(!(val instanceof Fraction) || val == null)
+         if(!(val instanceof Fraction) || val == null)
         {
             return false;
         }
-        Fraction check = (Fraction)val;
-        return numerator.equals(check.numerator) && denominator.equals(check.denominator);
+        return numerator.equals(numerator) && val.denominator.equals(numerator);
     }
 
     /**
@@ -329,6 +328,14 @@ public class Fraction
         if((numerator == BigInteger.ZERO) || (denominator == BigInteger.ZERO))
         {
             return "0";
+        }
+        else if(denominator.equals(BigInteger.ONE))
+        {
+            return numerator.toString();
+        }
+        else if(denominator == numerator)
+        {
+            return "1";
         }
         return "(" + numerator.toString() + " / " + denominator.toString() + ")";
     } 
