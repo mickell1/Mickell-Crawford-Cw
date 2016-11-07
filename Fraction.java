@@ -1,5 +1,3 @@
- 
-
 import java.math.*;
 /**
  * Immutable fractions of whole numbers, also known as rational numbers,
@@ -15,13 +13,15 @@ import java.math.*;
  *
  * @author Mickell Crawford
  * 
+ * https://github.com/mickell1/Mickell-Crawford-Cw
+ * 
  * Reference: http://stackoverflow.com/questions/474535/best-way-to-represent-a-fraction-in-java 
  */
 public class Fraction 
 {
     /*Instance variables*/
-    private  BigInteger numerator; 
-    private  BigInteger denominator;   
+    private BigInteger numerator; 
+    private BigInteger denominator;   
     /**
      * Constructs a Fraction taking the value of its parameter.
      *
@@ -92,6 +92,9 @@ public class Fraction
      */
     public static Fraction sumAll(Fraction[] fractions) 
     {
+        /*The code below sums up the total value of fractions, returns null if there is an empty space
+          in the array
+        */
         Fraction sum = new Fraction(BigInteger.ZERO);
         for(int i = 0; i < fractions.length; i++)
         {
@@ -100,7 +103,6 @@ public class Fraction
                 return null;
             }
             sum = sum.add(fractions[i]);
-            //return sum;
         }
         return sum;
     }
@@ -160,6 +162,7 @@ public class Fraction
      */
     public Fraction invert() 
     {
+        /*The code below flips fraction upside down*/
         return new Fraction(denominator, numerator);
     }
 
@@ -172,6 +175,7 @@ public class Fraction
      */
     public int signum() 
     {
+        /*Returns the sign*/
         if(numerator.signum() < 0 || denominator.signum() < 0)
         {
             return -1;
@@ -195,6 +199,7 @@ public class Fraction
      */
     public Fraction abs() 
     {
+        /*Returns the absolute value*/
         if(signum() < 0)
         {
             return negate();
@@ -279,6 +284,7 @@ public class Fraction
      */
     public int compareTo(Fraction val) 
     {
+        /*Compares two fractions against each other*/
         if(signum() != val.signum())
         {
             return denominator.compareTo(val.denominator);
@@ -303,6 +309,7 @@ public class Fraction
      */
     public boolean isEqualTo(Fraction val) 
     {
+        /*Checks if two fractions are equal of equal values*/
          if(!(val instanceof Fraction) || val == null)
         {
             return false;
@@ -327,6 +334,7 @@ public class Fraction
      */
     public String toString() 
     {
+        /*Returns a string representation of a fraction*/
        if(denominator.signum() < 0)
         {
           numerator = numerator.negate();
