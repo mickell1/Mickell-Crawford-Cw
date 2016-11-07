@@ -311,6 +311,9 @@ public class Fraction
     public boolean isEqualTo(Fraction val) 
     {
         /*Checks if two fractions are equal of equal values*/
+        /*instanceof is a comparision operator that checks if the val fraction is an instance of this 
+         * fraction
+         */
          if(!(val instanceof Fraction) || val == null)
         {
             return false;
