@@ -15,7 +15,8 @@ import java.math.*;
  * 
  * https://github.com/mickell1/Mickell-Crawford-Cw
  * 
- * Reference: http://stackoverflow.com/questions/474535/best-way-to-represent-a-fraction-in-java 
+ * Reference: http://stackoverflow.com/questions/474535/best-way-to-represent-a-fraction-in-java
+ * Reference: https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html#toString--
  */
 public class Fraction 
 {
